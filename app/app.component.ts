@@ -1,27 +1,4 @@
-import { Component } from '@angular/core'
-
-class Todo {
-	// title: string;
-	// completed: boolean;
-
-	constructor(public title: string, 
-				public completed: boolean = false) {}
-}
-
-const todos: Todo[] = [
-	{
-		title: 'Learn JavaScript',
-		completed: true
-	},
-	{ 
-		title: 'Learn Angular 2',
-		completed: false
-	},
-	{
-		title: 'Write app',
-		completed: false
-	}
-];
+import { Component } from '@angular/core';
 
 @Component({
 	moduleId: module.id,
@@ -32,25 +9,5 @@ const todos: Todo[] = [
 })
 export class AppComponent {
 	title: string = 'Angular 2Do';
-	todos: Todo[] = todos;
-	newTodoTitle: string = '';
-
-	create() {
-		let todo: Todo = new Todo(this.newTodoTitle);
-
-		todos.push(todo);
-		this.newTodoTitle = '';
-	}
-
-	toggle(todo: Todo) {
-		todo.completed = !todo.completed;
-	}
-
-	delete(todo: Todo) {
-		let index = this.todos.indexOf(todo);
-
-		if (index > -1) {
-			this.todos.splice(index, 1);
-		}
-	}
+	
 }
