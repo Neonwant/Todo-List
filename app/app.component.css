@@ -20,7 +20,7 @@ header h1 {
 }
 
 main {
-    width: 600px;
+    width: auto;/*600px;*/ 
     /*height: calc(100% - 56px);*/
     margin: auto;
     padding: 2rem;
